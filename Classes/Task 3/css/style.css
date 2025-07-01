@@ -1,0 +1,228 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  background-color: rgb(217, 221, 221);
+  position: relative;
+  overflow: hidden;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  min-width: 250px;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 3px solid white;
+}
+
+.card--delivered {
+  border: 3px solid green;
+}
+
+.card--canceled::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(217, 221, 221);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card__wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 400;
+  color: grey;
+  font-size: 14px;
+}
+
+.card__text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 1px solid rgb(17, 171, 209);
+  color: rgb(17, 171, 209);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 5px 8px;
+  background-color: white;
+  transition: color .3s, border-color .3s, background-color .3s;
+}
+
+.edit-btn:hover {
+  background-color: rgb(17, 171, 209);
+  color: white;
+}
+
+.edit-btn:active {
+  background-color: rgb(7, 150, 185);
+  color: white;
+}
+
+.form-wrap {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 200px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+
+.form {
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  background-color: white;
+  opacity: 1;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__title {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.form__text-field {
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.form__select {
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.form__btn {
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 18px;
+  background-color: rgb(17, 171, 209);
+  transition: background-color .3s;
+}
+
+.form__btn:hover {
+  background-color: rgb(50, 190, 224);
+}
+
+.form__btn:active {
+  background-color: rgb(7, 150, 185);
+}
+
+.form__cancelBtn {
+  position: absolute;
+  content: '';
+  top: 15px;
+  cursor: pointer;
+  align-self: end;
+}
+
+.form__cancelBtn::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+  background-color: black;
+}
+
+.form__cancelBtn::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+  background-color: black;
+}
+
+.app-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.distance-btn {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 18px;
+  background-color: rgb(17, 171, 209);
+  transition: background-color .3s;
+}
+
+.distance-btn:hover {
+  background-color: rgb(50, 190, 224);
+}
+
+.distance-btn:active {
+  background-color: rgb(7, 150, 185);
+}
+
+.text-distance {
+  font-weight: 700;
+  font-size: 20px;
+}

@@ -1,0 +1,11 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dogs,
+.cats {
+  display: flex;
+  gap: 10px;
+}

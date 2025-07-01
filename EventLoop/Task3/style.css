@@ -1,0 +1,24 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dogs,
+.cats {
+  display: flex;
+  gap: 10px;
+}
+
+#progress-bar,
+.progress-bar,
+#catsProgress-bar,
+#dogsProgress-bar {
+  height: 20px;
+  width: 500px;
+  background-color: rgb(84, 53, 221);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: none;
+}

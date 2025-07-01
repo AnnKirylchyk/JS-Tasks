@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление банковской карты</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1> Оформление банковской карты</h1>
+  <form action="#" class="form">
+    <label> Введите имя владельца карты
+      <input class="input" type="text">
+    </label>
+    <label> Выберите цвет банковской карты
+      <select class="select" name="color">
+        <option value="">Выберите цвет</option>
+        <option value="lightgreen">Зеленый</option>
+        <option value="lightblue">Синий</option>
+        <option value="indianred">Красный</option>
+      </select>
+    </label>
+  </form>
+  <h2>Полученный результат внешнего вида карты:</h2>
+  <p class="card"></p>
+</body>
+<script>
+  const inputEl = document.querySelector('.input');
+  const selectEl = document.querySelector('.select');
+  const cardEl = document.querySelector('.card');
+
+  inputEl.addEventListener('input', function (e) {
+    cardEl.textContent = inputEl.value
+  });
+
+  inputEl.addEventListener('focus', function (e) {
+    inputEl.style.backgroundColor = 'navajowhite'
+    inputEl.style.outline = '2px solid peru'
+    inputEl.style.borderColor = 'transparent'
+  });
+
+  inputEl.addEventListener('blur', function (e) {
+    inputEl.style.backgroundColor = 'unset'
+    inputEl.style.borderColor = 'black'
+    inputEl.style.outline = 'none'
+  });
+
+  selectEl.addEventListener('change', function (e) {
+    cardEl.style.backgroundColor = selectEl.value
+  });
+
+</script>
+</html>

@@ -1,0 +1,8 @@
+#progress-bar {
+  height: 20px;
+  width: 500px;
+  background-color: rgb(84, 53, 221);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
